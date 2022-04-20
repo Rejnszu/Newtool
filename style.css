@@ -1,0 +1,642 @@
+/*
+Theme Name: Newtool
+Text Domain: Newtool
+Version: 1.1
+Description: Newtool
+Author: Piotr Brokowski & Łukasz Rejnsz
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+#background_wrap {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-image: url("assets/background2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+.main {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+  padding: 0;
+}
+.main h1 {
+  /* margin-top: 5rem; */
+  font-weight: 600;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* SIDEBAR */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  position: relative;
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1rem;
+  color: #ffffff;
+  display: none;
+  transition: 0.3s;
+  z-index: 10;
+}
+div.sidebarOpen.sidebar a {
+  display: block;
+}
+.side-links::before,
+.side-links::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 0;
+  background-color: rgba(8, 33, 145, 0.5);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.side-links::before {
+  top: 0;
+  left: 0;
+}
+.side-links::after {
+  top: 0;
+  right: 0;
+}
+.side-links:hover.side-links::before,
+.side-links:hover.side-links::after {
+  width: 50%;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  font-size: 36px;
+  margin-left: 50px;
+  z-index: 10000000;
+}
+
+.openbtn {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  z-index: 10000;
+}
+
+.openbtn:hover {
+  background-color: rgb(0, 0, 0);
+}
+@media (min-width: 1025px) {
+  .openbtn {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
+}
+
+/* NAVIGATION */
+
+.navigation {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.navigation img {
+  max-width: 13rem;
+}
+.navigation ul {
+  list-style: none;
+}
+.nav {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.nav a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+.nav-kontakt {
+  color: white;
+  font-size: 1.2rem;
+}
+.nav a:hover,
+.nav a:focus {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0px 2px 2px 4px rgba(32, 94, 175, 0.596);
+  border-radius: 10px;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .hidden {
+    display: none;
+  }
+  .navigation img {
+    max-width: 9rem;
+  }
+}
+@media (max-width: 770px) {
+  .nav-kontakt li {
+    font-size: 0.9rem;
+    padding-left: 0rem;
+  }
+  .col-img {
+    display: flex;
+  }
+  .col-img a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* SLIDER */
+.mySlides {
+  display: none;
+  width: 100%;
+  max-height: 30rem;
+}
+.slidediv1 {
+  background-image: url("assets/slider1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  width: 100%;
+  height: 30rem;
+}
+.slidediv2 {
+  background-image: url("assets/slider2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  width: 100%;
+  height: 30rem;
+}
+.slidediv3 {
+  background-image: url("assets/slider3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  width: 100%;
+  height: 30rem;
+}
+.slidediv4 {
+  background-image: url("assets/slider4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  width: 100%;
+  height: 30rem;
+}
+.slidediv5 {
+  background-image: url("assets/slider5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  width: 100%;
+  height: 30rem;
+}
+@media (max-width: 400px) {
+  .mySlides {
+    max-height: 15rem;
+  }
+}
+/* O NAS */
+#onas {
+  padding-bottom: 5rem;
+  padding-top: 8rem;
+}
+.onas {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: solid 2px rgb(43, 105, 197);
+  border-radius: 8px;
+  box-shadow: 8px 8px 8px 10px rgba(0, 0, 0, 0.7);
+  color: white;
+}
+.onas h1 {
+  margin-bottom: 2rem;
+  margin-top: 0;
+  font-size: 5rem;
+  font-weight: 700;
+}
+.onas p {
+  font-size: 1rem;
+}
+.onas img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.onas img:hover {
+  opacity: 1.1;
+}
+/* .onasimg {
+  background-image: url("assets/newtoolonas.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+} */
+
+/* GALERIA */
+/* Position the image container (needed to position the left and right arrows) */
+.galeria {
+  padding-bottom: 2rem;
+}
+.galeria h1 {
+  color: white;
+
+  margin-top: 3rem;
+}
+.col-galeria {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 90%;
+  padding: 0;
+  border: 5px solid rgba(55, 55, 189, 0.274);
+  border-radius: 8px;
+  box-shadow: 8px 8px 8px 10px rgba(0, 0, 0, 0.7);
+}
+/* Hide the images by default */
+.mySlides-gallery {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.row-gallery:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 14.28%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* OFERTA */
+.oferta {
+  padding-bottom: 5rem;
+  padding-top: 4rem;
+  color: rgb(255, 255, 255);
+}
+.oferta a {
+  text-decoration: none;
+}
+.card-oferta {
+  position: relative;
+  cursor: pointer;
+  max-width: 25rem;
+  height: 25rem;
+
+  color: rgb(255, 255, 255);
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.2s;
+  border: solid 2px rgb(43, 105, 197);
+  box-shadow: 8px 8px 8px 10px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  overflow: hidden;
+}
+@media (max-width: 400px) {
+  .card-oferta {
+    height: 30rem;
+  }
+}
+.card-oferta i {
+  font-size: 2.5rem;
+  position: absolute;
+  color: rgb(43, 105, 197);
+  bottom: 0.5rem;
+  left: 45%;
+}
+.milwaukee-oferta {
+  background-image: url("assets/milw.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+}
+.ryobi-oferta {
+  background-image: url("assets/ryobi.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+}
+.husqvarna-oferta {
+  background-image: url("assets/huqvlogowhite.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+}
+.pferd-oferta {
+  background-image: url("assets/pefrd logo.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+}
+.wiha-oferta {
+  background-image: url("assets/wiha logo.png");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+}
+.brennenstuhl-oferta {
+  background-image: url("assets/brenen logo.jpg");
+  background-size: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-content: center;
+}
+.card-body h3 {
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+.card-body {
+  position: relative;
+  color: rgb(255, 255, 255);
+  background-color: rgba(33, 122, 196, 0.85);
+  transform: translateY(100%);
+  transition: all 0.3s;
+}
+.card-text {
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  border: 1px solid rgba(43, 105, 197, 0.7);
+  border-radius: 5px;
+}
+.card-oferta:hover .card-body {
+  transform: translateY(0);
+}
+
+.btn-oferta {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: 70%;
+  padding: 0.5rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.btn-oferta:hover,
+.btn-oferta:focus {
+  text-decoration: none;
+  background-color: rgba(33, 122, 196, 0.85);
+  color: black;
+}
+@media (max-width: 350px) {
+  .card-text {
+    font-size: 0.9rem;
+  }
+}
+/* USLUGI */
+.uslugi {
+  color: rgb(255, 255, 255);
+
+  padding-bottom: 5rem;
+  padding-top: 7rem;
+}
+
+.uslugi p {
+  display: block;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  padding: 10px 20px;
+}
+.uslugi p:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+/* SKLEPY KARTY */
+.sklepy {
+  padding-bottom: 5rem;
+  padding-top: 7rem;
+  color: white;
+}
+.sklepy h1 {
+  margin-bottom: 7rem;
+}
+
+.card-sklepy {
+  position: relative;
+  padding: 1rem;
+  max-width: 18rem;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 4rem;
+  margin-top: 1rem;
+  border: 1px solid rgb(43, 105, 197);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 6px 6px 6px 7px rgba(0, 0, 0, 0.7);
+  transition: all 0.5s;
+  transform: skewY(10deg);
+}
+.autop {
+  position: absolute;
+  top: 0;
+  left: 31%;
+}
+.card-sklepy:hover {
+  transform: scale(1.2);
+}
+.card-img-sklepy-top {
+  height: 5rem;
+}
+.card-img-sklepy-bottom {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 10rem;
+}
+.btn-sklepy {
+  display: inline-block;
+  padding: 0.5rem;
+  color: white;
+  background-color: black;
+  border: 1px solid rgb(43, 105, 197);
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.btn-sklepy:hover,
+.btn-sklepy:focus {
+  text-decoration: none;
+  background-color: rgb(43, 105, 197);
+  color: black;
+}
+/* Kontakt */
+.kontakt {
+  padding-top: 7rem;
+  color: white;
+  padding-bottom: 5rem;
+}
+.kontakt h2 {
+  padding: 1.5rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 2.5rem;
+}
+.dane-kontaktowe ul {
+  list-style: none;
+}
+.dane-kontaktowe li {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: white;
+}
+.dane-kontaktowe li:hover {
+  color: rgb(255, 0, 0);
+}
+.dane-kontaktowe i {
+  margin-right: 0.2rem;
+}
+.kontakt-container-map > iframe {
+  width: 100%;
+}
+.table-kontakt {
+  color: rgb(255, 255, 255);
+}
+.bordered-kontakt {
+  font-size: 1.2rem;
+  border-bottom: solid 1px rgb(255, 255, 255);
+}
+@media (max-width: 300px) {
+  .bordered-kontakt {
+    font-size: 1rem;
+  }
+}
+/* REBRO */
+.rebro {
+  padding: 1rem 1rem 1rem 2rem;
+  color: white;
+}
+.rebro a {
+  text-decoration: none;
+}
