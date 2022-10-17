@@ -93,7 +93,7 @@
         <div class="row g-0">
 
           <div class="col-sm-12 col-md-6 center ">
-            <h1 class="text-center">O firmie</h1>
+            <h2 class="text-center">O firmie</h2>
             <p class="text-justify">
 
               Firma „Newtool" Spółka z o.o. zajmuje się sprzedażą narzędzi ręcznych i elektronarzędzi do użytku profesjonalnego, jak również i domowego.
@@ -114,7 +114,7 @@
       </div>
       <!-- GALERIA -->
       <div class="container galeria" style="overflow:hidden">
-        <h1 class="text-center" data-aos="fade-right">Krótki spacer po naszym sklepie</h1>
+        <h2 class="text-center" data-aos="fade-right">Krótki spacer po naszym sklepie</h2>
         <div class="row">
           <div class="col col-galeria" data-aos="fade-up">
             <div class="mySlides-gallery">
@@ -188,7 +188,7 @@
 
     <!-- SEKCJA NASZA OFERTA -->
     <div class="container-fluid oferta " style="overflow:hidden" id="oferta">
-      <h1 class="text-center">Nasza oferta produktów</h1>
+      <h2 class="text-center">Nasza oferta produktów</h2>
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="card card-oferta milwaukee-oferta" data-aos="fade-down">
@@ -272,7 +272,7 @@
     <!-- SEKCJA USLUGI -->
     <div class="container mt-5 uslugi" style="overflow:hidden" id="uslugi">
 
-      <h1 class="text-center" data-aos="fade-right">Oferowane przez nas usługi</h1>
+      <h2 class="text-center" data-aos="fade-right">Oferowane przez nas usługi</h2>
       <div class="row">
         <div class="col">
           <p data-aos="fade-left">&check; Serwis gwarancyjny i pogwarancyjny</p>
@@ -285,7 +285,7 @@
     </div>
     <!-- SEKCJA SKLEPY INTERNETOWE -->
     <div class="container sklepy mt-5" id="sklepy">
-      <h1 class="text-center" data-aos="fade-right">Nasze sklepy i strony internetowe</h1>
+      <h2 class="text-center" data-aos="fade-right">Nasze sklepy i strony internetowe</h2>
       <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-4" data-aos="fade-up">
           <div class="card-sklepy text-center">
@@ -332,7 +332,7 @@
     </div>
     <!-- SEKCJA KONTAKT -->
     <div class="container kontakt" style="overflow:hidden" id="kontakt">
-      <h1 class="text-center" data-aos="fade-right">Kontakt</h1>
+      <h2 class="text-center" data-aos="fade-right">Kontakt</h2>
       <div class="row">
         <div class="col-sm-12 col-md-6 dane-kontaktowe" data-aos="flip-left">
           <h2 class="">Dane Kontaktowe</h2>

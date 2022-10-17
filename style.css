@@ -36,7 +36,7 @@ html {
   /* overflow: hidden; */
   padding: 0;
 }
-.main h1 {
+.main h2 {
   /* margin-top: 5rem; */
   font-weight: 600;
   margin-bottom: 5rem;
@@ -265,7 +265,7 @@ div.sidebarOpen.sidebar a {
   box-shadow: 8px 8px 8px 10px rgba(0, 0, 0, 0.7);
   color: white;
 }
-.onas h1 {
+.onas h2 {
   margin-bottom: 2rem;
   margin-top: 0;
   font-size: 5rem;
@@ -298,7 +298,7 @@ div.sidebarOpen.sidebar a {
 .galeria {
   padding-bottom: 2rem;
 }
-.galeria h1 {
+.galeria h2 {
   color: white;
 
   margin-top: 3rem;
@@ -540,7 +540,7 @@ div.sidebarOpen.sidebar a {
   padding-top: 7rem;
   color: white;
 }
-.sklepy h1 {
+.sklepy h2 {
   margin-bottom: 7rem;
 }
 
